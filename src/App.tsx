@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Main from './components/main'
+import img from './images/watx.jpg'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{backgroundImage:`url(${img})`,
+    backgroundSize:'cover',
+    backgroundPosition:'center center',
+    minHeight:'100vh',
+    margin:0
+  }}>
+      <h1 style={{fontSize:'4rem',display:'flex',justifyContent:'center',
+     alignItems:'center',
+     fontWeight:'normal',
+     flexWrap:'wrap'}}>Count Down</h1>
+     <div >
+     <Main/>
+     </div>
     </div>
   );
 }
