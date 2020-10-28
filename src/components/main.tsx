@@ -10,6 +10,7 @@ export default function Main() {
     let tmArray: Array<number | string> = calculatorTime(tmsecond);
     setTimeArray(tmArray);
   }, [tmsecond]);
+  console.log(timeArray,"HHHHH")
   return (
     <div className="countdown-container">
       <div className="countdown-el days-c">
@@ -22,7 +23,7 @@ export default function Main() {
       </div>
       <div className="countdown-el minute-c">
         <p className="big-text">{timeArray[2]}</p>
-        {/* <span>minute</span> */}
+        <span>minute</span>
       </div>
 
       {/* <div className="countdown-el second-c">
