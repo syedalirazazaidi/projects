@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.quiz_container {
+  justify-content: center;
+  margin: "90 60px";
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 100vh;
+  /* background-color: aqua; */
+}
