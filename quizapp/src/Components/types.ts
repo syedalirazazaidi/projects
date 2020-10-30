@@ -1,6 +1,11 @@
-
 export type Quiztype = {
   question: string;
-  answers:string[]|number[],
+  answers: {
+    a: number|string
+    b: number|string
+    c: number|string
+    d: number|string
+    e: number|string
+}[];
   correct: string;
 };

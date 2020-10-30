@@ -1,14 +1,14 @@
 import React from "react";
 import "./Quiz.css";
 import { getQuizQuestion } from "./Util";
+import { Quiztype } from "./types";
+import QuizCard from "./QuizCard";
 export const Quiz = () => {
-  const [quiz, setQuiz] = React.useState([]);
+  const [quiz, setQuiz] = React.useState<Quiztype[]>([]);
   React.useEffect(() => {
-    // setQuiz(getQuizQuestion);
     setQuiz(getQuizQuestion);
-    // console.log(getQuizQuestion(), "LLL");
+    getQuizQuestion();
   }, []);
-  console.log(quiz);
   return (
     <div>
       <h1
@@ -22,7 +22,9 @@ export const Quiz = () => {
       >
         Quiz App
       </h1>
-      <div className="quiz_container">Question comes from Trivia</div>
+      <div>
+        <QuizCard quiz={quiz} />
+      </div>
     </div>
   );
 };
