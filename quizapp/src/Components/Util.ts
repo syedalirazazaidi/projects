@@ -1,7 +1,18 @@
+import { Quiztype } from './types';
 import { QuizData } from "./../Data/QuizData";
 
-export const getQuizQuestion = () => {
+const shuffleArray=(array:any[])=>[...array].sort(()=>Math.random()-0.5)
+
+export const getQuizQuestion = ():Quiztype[] => {
   const getData = QuizData;
-  const data = getData;
-   return (data);
+  const data:Quiztype[] = getData;
+  const res= data.map((questionObj:Quiztype,ind:number)=>{
+    return{
+      question:questionObj.question,
+      answers:shuffleArray(questionObj.answers.concat(questionObj.correct)),
+      correct:questionObj.correct
+    }
+  })
+  return res
+  
 };
