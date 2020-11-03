@@ -5,18 +5,22 @@ import "./Quiz.css";
 import QuizCard from "./QuizCard";
 export const Quiz = () => {
   const [quiz, setQuiz] = React.useState<Quiztype[]>([]);
-  const [questionA, setnextQuestion] = React.useState(0);
-  const [selectanswer, setselectanswer] = React.useState("");
+  let [questionA, setnextQuestion] = React.useState(0);
+  let [score, setScore] = React.useState(0);
 
   const nextQuestion = (e: React.FormEvent<EventTarget>, ans: string) => {
     e.preventDefault();
-    console.log(ans, "ANSWER");
+    const cuQuestion: Quiztype = quiz[questionA];
+    console.log(cuQuestion.correct);
+    if (ans === cuQuestion.correct) {
+      setScore(++score);
+    }
     if (questionA !== quiz.length - 1) {
-      let ans = 0;
       setnextQuestion(questionA + 1);
     } else {
-      alert("ji");
+      alert("YOUR SCORE = " + score + " OUT OFF = " + quiz.length);
       setnextQuestion(0);
+      setScore(0);
     }
   };
 
@@ -34,7 +38,6 @@ export const Quiz = () => {
         option={quiz[questionA].answers}
         question={quiz[questionA].question}
         nextQuestion={nextQuestion}
-        // handleSelection={handleSelection}
       />
     </div>
   );

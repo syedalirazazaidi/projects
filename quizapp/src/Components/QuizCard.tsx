@@ -1,10 +1,9 @@
 import React from "react";
-import { Quiztype } from "./types";
+
 type Props = {
   option: string[];
   question: string;
   nextQuestion: (e: React.FormEvent<EventTarget>, ans: string) => void;
-  // handleSelection: any;
 };
 
 const QuizCard = (props: Props) => {
@@ -31,9 +30,12 @@ const QuizCard = (props: Props) => {
                     <li>
                       <label>
                         <input
+                          style={{ cursor: "pointer", margin: 10 }}
                           type="radio"
                           name="opt"
+                          required
                           value={opt}
+                          checked={choseAnswer === opt}
                           onChange={handleSelection}
                         />
                         <label
