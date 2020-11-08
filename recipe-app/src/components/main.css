@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  margin: 0;
+  background-color: #fbf3fa;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.recepi_container {
+  background-color: #ffff;
+  width: 350px;
+  margin: 0;
+  box-shadow: 0 0 10px 2px #3333331a;
+}
+img {
+  max-width: 100%;
+}
+header {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+header input {
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #eeeeee;
+  margin-top: 10px;
+  color: black;
+}
+
+.fav-container {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  background-color: rgb(233, 199, 255);
+}
+
+.fav-container ul li {
+  list-style-type: none;
+}
+.fav-meal {
+  overflow: auto;
+
+  padding: 0;
+}
+.fav-meal span {
+  font-size: 1rem;
+}
+.fav-meal li {
+  margin: 5px;
+  width: 85px;
+}
+.fav-meal ul {
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+.fav-meal li img {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px 2px #3333331a;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.meal-container {
+  margin: 1.5rem;
+  box-shadow: 0 0 10px 2px #3333331a;
+  overflow: hidden;
+}
+.header img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.icon-css {
+  color: red;
+  font-size: 25px;
+  cursor: pointer;
+}
+.icon-css.active {
+  color: gray;
+}
+.header .random {
+  position: absolute;
+  top: 390px;
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  border-top-right-radius: 3px;
+  opacity: 0.5;
+  border-top-left-radius: 3px;
+}
+.header .random:hover {
+  cursor: pointer;
+  background-color: green;
+  color: red;
+  opacity: 0.9;
+}
