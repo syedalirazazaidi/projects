@@ -70,10 +70,8 @@ export const Main: React.FC = () => {
     aSear.push(e.target.value.toLowerCase());
   };
   const onSearch = () => {
-    console.log(aSear, "PPPPP");
     setSearch(aSear);
   };
-  console.log(search, "SEARCH");
   const { strMeal, strMealThumb } = meal;
   return (
     <div className="recepi_container">
@@ -84,7 +82,7 @@ export const Main: React.FC = () => {
             placeholder="search a meal"
             onChange={handleSearch}
           />
-
+          {search}
           <BiSearch
             onClick={onSearch}
             style={{
